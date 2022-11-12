@@ -41,3 +41,32 @@ navBtn.onclick = function () {
     nav.classList.toggle('nav--mobile');
     document.body.classList.toggle('no-scroll');
 }
+
+/*tabs*/
+
+let tab = function () {
+    const tabNav = document.querySelectorAll('.tabs-nav__item');
+    const tabContent = document.querySelectorAll('.tab');
+    let tabName;
+
+    tabNav.forEach(item => {
+        item.addEventListener('click', selectTabNav)
+    });
+
+    function selectTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('isActive');
+        });
+        this.classList.add('isActive');
+        tabName = this.getAttribute('data-tab-name');
+        selectTabContent(tabName)
+    }
+
+    function selectTabContent(tabName) {
+tabContent.forEach(item => {
+    item.classList.contains(tabName) ? item.classList.add('isActive') : item.classList.remove('isActive');
+})
+    }
+};
+
+tab();
