@@ -494,10 +494,6 @@ body {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
-.tabs__content {
-
-}
-
 .tab {
     display: none;
     padding: 20px;

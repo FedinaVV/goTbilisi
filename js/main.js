@@ -45,8 +45,8 @@ navBtn.onclick = function () {
 /*tabs*/
 
 let tab = function () {
-    const tabNav = document.querySelectorAll('.tabs-nav__item');
-    const tabContent = document.querySelectorAll('.tab');
+    let tabNav = document.querySelectorAll('.tabs-nav__item');
+    let tabContent = document.querySelectorAll('.tab');
     let tabName;
 
     tabNav.forEach(item => {
@@ -63,9 +63,9 @@ let tab = function () {
     }
 
     function selectTabContent(tabName) {
-tabContent.forEach(item => {
-    item.classList.contains(tabName) ? item.classList.add('isActive') : item.classList.remove('isActive');
-})
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('isActive') : item.classList.remove('isActive');
+        })
     }
 };
 
